@@ -2,6 +2,8 @@
 
 https://github.com/user-attachments/assets/b2ba13ab-e8dd-4285-aacc-e186572818d8
 
+[Apple Watch Demo](https://jeantimex.github.io/apple-watch/)
+
 ## Features
 - Hexagonal app layout projected onto a faux sphere to mimic Apple’s depth effect.
 - Pointer/touch drag with inertia and snap-to-center behaviour.
