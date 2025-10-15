@@ -1,5 +1,3 @@
-const MAX_HEX_LAYER = 5
-
 const cache = []
 
 const generateCoordinates = (layers) => {
@@ -16,10 +14,9 @@ const generateCoordinates = (layers) => {
   }
 }
 
-export const getHexCoordinates = () => {
+export const getHexCoordinates = (layers = 5) => {
   if (cache.length === 0) {
-    generateCoordinates(MAX_HEX_LAYER)
+    generateCoordinates(layers)
   }
-
   return cache
 }
