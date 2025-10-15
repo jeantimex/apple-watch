@@ -5,6 +5,11 @@ function easeOutQuad(t, b, c, d) {
   return -c * progress * (progress - 2) + b
 }
 
+function easeOutCubic(t, b, c, d) {
+  const progress = t / d - 1
+  return c * (progress * progress * progress + 1) + b
+}
+
 function easeInOutCubic(t, b, c, d) {
   let progress = t / (d / 2)
   if (progress < 1) {
@@ -26,11 +31,20 @@ function easeInSine(t, b, c, d) {
   return -c * Math.cos((t / d) * (Math.PI / 2)) + c + b
 }
 
-export const easing = {
+export {
   swing,
+  easeOutCubic,
   easeInOutCubic,
   easeInOutSine,
   easeOutSine,
   easeInSine,
 }
 
+export const easing = {
+  swing,
+  easeOutCubic,
+  easeInOutCubic,
+  easeInOutSine,
+  easeOutSine,
+  easeInSine,
+}

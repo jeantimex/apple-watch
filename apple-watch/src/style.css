@@ -44,6 +44,12 @@ body {
   left: 32px;
   top: 102px;
   overflow: hidden;
+  touch-action: none;
+  cursor: grab;
+}
+
+.viewport.is-dragging {
+  cursor: grabbing;
 }
 
 .home {
