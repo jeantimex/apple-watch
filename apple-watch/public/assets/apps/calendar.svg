@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" id="calendar">
+  <g fill="none" fill-rule="evenodd">
+    <circle cx="20.5" cy="20" r="20" fill="#FFF"></circle>
+    <text fill="#FF3B30" font-family="Helvetica" font-size="8" letter-spacing=".5"><tspan x="11.869" y="11.72">Mon</tspan></text>
+    <text fill="#000" font-family="Helvetica" font-size="23" letter-spacing=".177"><tspan x="13.916" y="32.5">5</tspan></text>
+  </g>
+</svg>

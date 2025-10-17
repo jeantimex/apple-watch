@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" id="timer">
+  <defs>
+    <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF9501"></stop>
+      <stop offset="100%" stop-color="#FF752F"></stop>
+    </linearGradient>
+    <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B07"></stop>
+      <stop offset="100%" stop-color="#FF571A"></stop>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle cx="20" cy="20.5" r="20" fill="url(#a)"></circle>
+    <circle cx="20" cy="20.5" r="12.5" fill="url(#b)"></circle>
+    <path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M28.6733913,28.4298564 C30.5842685,26.340202 31.75,23.5576905 31.75,20.5029079 C31.75,14.0135621 26.4893458,8.75290792 20,8.75290792 C13.5106542,8.75290792 8.25,14.0135621 8.25,20.5029079 C8.25,26.8667703 13.3091724,32.0489997 19.6249572,32.247036 C19.6495984,32.2478086 19.6866029,32.2487966 19.7359708,32.25 L19.7359708,27.740442" transform="rotate(180 20 20.501)"></path>
+    <path fill="#FFF" d="M17.9571068,23.3461941 C19.0616763,23.3461941 19.9571068,22.4507636 19.9571068,21.3461941 C19.9571068,20.2416246 18.6642136,13.5680195 17.9571068,13.5680195 C17.25,13.5680195 15.9571068,20.2416246 15.9571068,21.3461941 C15.9571068,22.4507636 16.8525373,23.3461941 17.9571068,23.3461941 Z" transform="rotate(-45 17.957 18.457)"></path>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" id="breathe">
+  <defs>
+    <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#31A4B3"></stop>
+      <stop offset="100%" stop-color="#59F2B4"></stop>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle cx="20.5" cy="20" r="20" fill="url(#a)"></circle>
+    <path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15.9941128,19.4890973 C19.1647344,16.0745143 19.9213787,15.182301 19.955497,15.146846 C21.2289995,13.8234509 23.0183361,13 25,13 C28.8659932,13 32,16.1340068 32,20 C32,23.8659932 28.8659932,27 25,27 L9.5,27" transform="rotate(90 20.75 20)"></path>
+    <path fill="#FFF" d="M21.5,15.5 L21.5,22.75 C21.5,23.4403559 20.9403559,24 20.25,24 C19.5596441,24 19,23.4403559 19,22.75 L19,14.25 C19,13.5596441 19.5596441,13 20.25,13 L29.25,13 C29.9403559,13 30.5,13.5596441 30.5,14.25 C30.5,14.9403559 29.9403559,15.5 29.25,15.5 L21.5,15.5 Z"></path>
+  </g>
+</svg>
