@@ -56,8 +56,8 @@ const createIcons = (homeEl) =>
   apps.map((app) => {
     const icon = document.createElement('div')
     icon.className = 'app-icon'
-    icon.style.backgroundImage = `url(./assets/apps/${app.id}.png)`
-    icon.dataset.name = app.name
+    icon.style.backgroundImage = `url(/assets/apps/${app}.svg)`
+    icon.dataset.name = app
     homeEl.appendChild(icon)
     return icon
   })
