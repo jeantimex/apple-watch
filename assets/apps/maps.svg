@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40" id="maps">
+  <defs>
+    <circle id="a" cx="20" cy="20" r="20"></circle>
+    <circle id="d" cx="10" cy="22" r="10"></circle>
+    <filter id="c" width="117.5%" height="117.5%" x="-8.8%" y="-6.2%" filterUnits="objectBoundingBox">
+      <feOffset dy=".5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation=".5"></feGaussianBlur>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0"></feColorMatrix>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <mask id="b" fill="#fff">
+      <use xlink:href="#a"></use>
+    </mask>
+    <use xlink:href="#a" fill="#E3E1DA"></use>
+    <rect width="21" height="21" x="23" y="-4" fill="#9DE07B" mask="url(#b)"></rect>
+    <rect width="24" height="26" x="22" y="21" fill="#FFCCD6" mask="url(#b)"></rect>
+    <g mask="url(#b)">
+      <g transform="translate(10 -2)">
+        <path fill="#FFF" stroke="#000" stroke-linecap="square" stroke-opacity=".15" stroke-width=".5" d="M16.25,15.25 L32.25,15.25 L32.25,28.75 L16.25,28.75 L16.25,45.25 L3.25,45.25 L3.25,-0.25 L16.25,-0.25 L16.25,15.25 Z"></path>
+        <use xlink:href="#d" fill="#000" filter="url(#c)"></use>
+        <use xlink:href="#d" fill="#0079DC"></use>
+        <path fill="#FFF" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width=".2" d="M10.0367374,24.0213093 L6.07262075,28.2087622 L5.9044997,28.110355 L9.94191949,15.110355 L10.1330748,15.1108577 L14.095655,28.1108577 L13.9267406,28.2080812 L10.0367374,24.0213093 Z"></path>
+      </g>
+    </g>
+  </g>
+</svg>
