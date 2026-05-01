@@ -25,24 +25,33 @@ body {
 }
 
 .watch-container {
+  --watch-image: url('/assets/apple-watch-white.png');
+  --watch-width: 200px;
+  --watch-height: 372px;
+  --screen-width: 135px;
+  --screen-height: 170px;
+  --screen-left: 32px;
+  --screen-top: 102px;
+  --app-size: 37px;
+
   display: flex;
   justify-content: center;
 }
 
 .watch {
-  width: 200px;
-  height: 372px;
+  width: var(--watch-width);
+  height: var(--watch-height);
   position: relative;
-  background: url('/assets/apple-watch-white.png') no-repeat center;
+  background: var(--watch-image) no-repeat center;
   background-size: cover;
 }
 
 .viewport {
   position: absolute;
-  width: 135px;
-  height: 170px;
-  left: 32px;
-  top: 102px;
+  width: var(--screen-width);
+  height: var(--screen-height);
+  left: var(--screen-left);
+  top: var(--screen-top);
   overflow: hidden;
   touch-action: none;
   cursor: grab;
@@ -54,18 +63,18 @@ body {
 
 .home {
   position: relative;
-  width: 135px;
-  height: 170px;
+  width: var(--screen-width);
+  height: var(--screen-height);
 }
 
 .app-icon {
   position: absolute;
-  width: 37px;
-  height: 37px;
+  width: var(--app-size);
+  height: var(--app-size);
   border-radius: 50%;
   transform-origin: center;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 37px 37px;
+  background-size: var(--app-size) var(--app-size);
   will-change: transform;
 }

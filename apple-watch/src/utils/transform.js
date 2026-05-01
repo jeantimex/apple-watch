@@ -3,7 +3,6 @@ import { easing } from './easing.js'
 
 const abs = Math.abs
 const SQRT3_OVER_2 = Math.sqrt(3) / 2
-const EDGE = 17
 
 const coordinates = getHexCoordinates()
 
@@ -32,39 +31,39 @@ const sphereProject = (radius, angle, sphereR) => {
   return { radius: projectedRadius, depth, angle }
 }
 
-const adjustPosition = (value, screenLimit) => {
-  if (value < -screenLimit + 2 * EDGE) {
-    return value + easing.easeInSine(screenLimit - abs(value) - 2 * EDGE, 0, 6, 2 * EDGE)
+const adjustPosition = (value, screenLimit, edge) => {
+  if (value < -screenLimit + 2 * edge) {
+    return value + easing.easeInSine(screenLimit - abs(value) - 2 * edge, 0, 6, 2 * edge)
   }
-  if (value > screenLimit - 2 * EDGE) {
-    return value + easing.easeInSine(screenLimit - abs(value) - 2 * EDGE, 0, -6, 2 * EDGE)
+  if (value > screenLimit - 2 * edge) {
+    return value + easing.easeInSine(screenLimit - abs(value) - 2 * edge, 0, -6, 2 * edge)
   }
   return value
 }
 
-const calculateScale = (x, y, depth, screenW, screenH) => {
-  if (abs(x) > screenW / 2 - EDGE || abs(y) > screenH / 2 - EDGE) {
+const calculateScale = (x, y, depth, screenW, screenH, edge) => {
+  if (abs(x) > screenW / 2 - edge || abs(y) > screenH / 2 - edge) {
     return depth * 0.4
   }
 
-  if (abs(x) > screenW / 2 - 2 * EDGE && abs(y) > screenH / 2 - 2 * EDGE) {
-    const scaleX = easing.easeInOutSine(screenW / 2 - abs(x) - EDGE, 0.4, 0.6, EDGE)
-    const scaleY = easing.easeInOutSine(screenH / 2 - abs(y) - EDGE, 0.3, 0.7, EDGE)
+  if (abs(x) > screenW / 2 - 2 * edge && abs(y) > screenH / 2 - 2 * edge) {
+    const scaleX = easing.easeInOutSine(screenW / 2 - abs(x) - edge, 0.4, 0.6, edge)
+    const scaleY = easing.easeInOutSine(screenH / 2 - abs(y) - edge, 0.3, 0.7, edge)
     return depth * Math.min(scaleX, scaleY)
   }
 
-  if (abs(x) > screenW / 2 - 2 * EDGE) {
-    return depth * easing.easeOutSine(screenW / 2 - abs(x) - EDGE, 0.4, 0.6, EDGE)
+  if (abs(x) > screenW / 2 - 2 * edge) {
+    return depth * easing.easeOutSine(screenW / 2 - abs(x) - edge, 0.4, 0.6, edge)
   }
 
-  if (abs(y) > screenH / 2 - 2 * EDGE) {
-    return depth * easing.easeOutSine(screenH / 2 - abs(y) - EDGE, 0.4, 0.6, EDGE)
+  if (abs(y) > screenH / 2 - 2 * edge) {
+    return depth * easing.easeOutSine(screenH / 2 - abs(y) - edge, 0.4, 0.6, edge)
   }
 
   return depth
 }
 
-export const getTransform = (index, { screenW, screenH, sphereR, hexR, scrollX, scrollY }) => {
+export const getTransform = (index, { screenW, screenH, sphereR, hexR, edge, scrollX, scrollY }) => {
   const coord = coordinates[index]
   if (!coord) {
     return null
@@ -83,10 +82,10 @@ export const getTransform = (index, { screenW, screenH, sphereR, hexR, scrollX, 
   y = (Math.round(y * 10) / 10) * 1.14
 
   const depth = projected.depth
-  const scale = calculateScale(x, y, depth, screenW, screenH)
+  const scale = calculateScale(x, y, depth, screenW, screenH, edge)
 
-  x = adjustPosition(x, screenW / 2)
-  y = adjustPosition(y, screenH / 2)
+  x = adjustPosition(x, screenW / 2, edge)
+  y = adjustPosition(y, screenH / 2, edge)
 
   return { x, y, scale }
 }
